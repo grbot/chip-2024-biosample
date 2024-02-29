@@ -1,3 +1,6 @@
+### Database diagram
+![Database diagram](https://github.com/grbot/chip-2024-biosample/blob/main/biosample.png?raw=true)
+
 ### Loading the databases
 ```
 $ sqlite3
