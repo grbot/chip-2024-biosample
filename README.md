@@ -4,7 +4,7 @@
 ### Loading the databases
 ```
 $ sqlite3
-> .read biosample.sql
+sqilite> .read biosample.sql
 ```
 
 ### Commands executed
