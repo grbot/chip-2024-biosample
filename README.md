@@ -33,7 +33,7 @@ SELECT * FROM disease WHERE id LIKE '_R_';
 SELECT avg(age) FROM patient;
 
 # Get the number of records where the age in the patient table is less or equal than 25
-SELECT count(*) FROM patient WHERE age <= 50;
+SELECT count(*) FROM patient WHERE age <= 25;
 
 # Joining on three tables
 SELECT * FROM sample JOIN patient ON sample.patient_id = patient.id JOIN dna ON sample.id = dna.sample_id;
