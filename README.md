@@ -1,11 +1,10 @@
 ### Loading the databases
-`$ sqlite3`
-`> .read biosample.sql`
+```
+$ sqlite3
+> .read biosample.sql
+```
 
 ### Commands executed
-
-SELECT avg(age) FROM patient;	
-
 ```
 # Select from table and on condition
 select * from disease;
@@ -26,6 +25,12 @@ SELECT * FROM disease WHERE type = 'Blood' OR type = 'Pediatric';
 SELECT * FROM disease WHERE type IN ('Blood', 'Pediatric');
 SELECT * FROM disease WHERE id LIKE '%C';
 SELECT * FROM disease WHERE id LIKE '_R_';
+
+# Get the average age from patient table
+SELECT avg(age) FROM patient;
+
+# Get the number of records where the age in the patient table is less or equal than 25
+SELECT count(*) FROM patient WHERE age <= 50;
 
 # Joining on three tables
 SELECT * FROM sample JOIN patient ON sample.patient_id = patient.id JOIN dna ON sample.id = dna.sample_id;
